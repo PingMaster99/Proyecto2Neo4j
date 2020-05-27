@@ -1,9 +1,9 @@
 recommendationQuestions = {
     "player_experience_questions": [
-        "He jugado Super Smash Bros antes: \n (1) Si \n (2) No",
+        "He jugado Super Smash Bros antes: \n (1) Si \n (2) No \n>> ",
         "Tengo experiencia con videojuegos:\n (1) Si \n (2) No",
-        "Considero que mi nivel en Super Smash Bros. es: \n (1) Jugador profesional \n (2) Soy bueno \n"
-        " (3) Juego a veces \n (4) No soy tan bueno \n (5) A penas conozco el juego"],
+        "Considero que mi nivel en Super Smash Bros. es: \n (1) A penas conozco el juego \n (2) No soy tan bueno \n"
+        " (3) Soy promedio \n (4) Soy bueno \n (5) Jugador profesional"],
 
     "fight_style_questions": [
         "Preferiría que mi personaje  pelee con: \n (1) Espada \n (2) Cuerpo a cuerpo\n (3) Proyectiles",
@@ -45,9 +45,7 @@ recommendationQuestions = {
 }
 
 
-
-
-def getAnswer(question_dictionary: dict, question_type: str):
+def getAnswers(question_dictionary: dict, question_type: str):
     # Gets the answer and compounds it
     question_list = question_dictionary.get(question_type)
     if question_type.lower() == "player_experience_questions":
@@ -57,9 +55,82 @@ def getAnswer(question_dictionary: dict, question_type: str):
 
     return 2
 
+
 def playerExperience(question_list: list):
-    question_list[0]
+    total_points = 0
+    print("En esta seccion de preguntas, veremos tu nivel en el juego")
+
+    user_selection = -1
+
+    # Question 1
+    while not verifyInput(user_selection, 1, 2):
+        try:
+            user_selection = int(input(question_list[0]))
+        except:
+            continue
+
+        twoOptionInput(user_selection, total_points, 5)  # Question with a weight of 5
+    user_selection = -1  # Restart the selection
+
+    # Question 2
+    while not verifyInput(user_selection, 1, 2):
+        try:
+            user_selection = int(input(question_list[1]))
+        except:
+            continue
+
+        twoOptionInput(user_selection, total_points, 2)  # Question with a weight of 2
+    user_selection = -1
+
+    # Question 3
+    while not verifyInput(user_selection, 1, 5):
+        try:
+            user_selection = int(input(question_list[2]))
+        except:
+            continue
+
+        multipleOptionInput(user_selection, total_points, 1)  # Question with a weight of 1
+
+    if total_points <= 11:
+        print("Pro")
+        # TODO add attribute of pro player
+    elif total_points <= 5:
+        print("Casual")
+        # TODO add attribute of casual player
+    else:
+        print("New in the game")
+        # TODO add attribute of new player
+
+
+
 
 def fightStyle(question_list: list):
+    user_input = -1
+    point_total = 0
+    weight = 5
+    index = 0
+    while not verifyInput(user_input, 1, 3):
+        try:
+            user_input = int(input(question_list[index]))
+        except Exception:
+            continue
+
+        multipleOptionInput(user_input, point_total, weight)
+        index += 1
     question_list[0]
 
+
+def verifyInput(user_input: int, minimum: int, maximum: int):
+    if minimum <= user_input <= maximum:
+        return True
+    else:
+        return False
+
+
+def twoOptionInput(user_input: int, point_total: int, weight: int):
+    if user_input == 1:
+        point_total += (1 * weight)
+
+
+def multipleOptionInput(user_input: int, point_total: int, weight: int):
+    point_total += (user_input * weight)
