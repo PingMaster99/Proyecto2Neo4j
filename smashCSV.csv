@@ -1,0 +1,76 @@
+Name,"Fight Style (Sword, Brawler, Projectile)","Up B OOS (Yes, No)","Weight (Heavy, Normal, Light)","Tier (S, A, B, C, D)",# Jumps,Saga,Type
+Bayonetta,Projectile,No,Light,C,4,Bayonetta,Human
+Bowser,Brawler,Yes,Heavy,A,2,Super Mario Bros,Fantasy
+Bowser Jr,Projectile,Yes,Normal,D,2,Super Mario Bros,Fantasy
+Captain Falcon,Brawler,No,Heavy,C,2,F Zero,Human
+Chrom,Sword,No,Normal,A,2,Fire Emblem,Human
+Cloud,Sword,Yes,Normal,A,2,Fire Emblem,Human
+Corrin,Sword,No,Normal,B,2,Fire Emblem,Human
+Dark Pit,Sword,No,Light,C,6,Kid Icarus,Human
+Dark Samus,Projectile,Yes,Normal,B,2,Metroid,Fantasy
+Diddy Kong,Brawler,No,Light,B,2,Donkey Kong,Animal
+Donkey Kong,Brawler,No,Heavy,B,2,Donkey Kong,Animal
+Dr. Mario,Brawler,Yes,Normal,D,2,Super Mario Bros,Human
+Duck Hunt,Projectile,No,Normal,C,2,Duck Hunt,Animal
+Falco,Brawler,No,Light,B,2,Star Fox,Animal
+Fox,Projectile,No,Light,S,2,Star Fox,Animal
+Ganondorf,Brawler,Yes,Heavy,D,2,The Legend of Zelda,Fantasy
+Greninja,Brawler,No,Light,C,2,Pokemon,Fantasy
+Ice Climbers,Brawler,No,Normal,C,2,Ice Climbers,Human
+Ike,Sword,No,Heavy,B,2,Fire Emblem,Human
+Incineroar,Brawler,No,Heavy,B,2,Pokemon,Fantasy
+Inkling,Projectile,No,Light,A,3,Splatoon,Fantasy
+Isabelle,Projectile,No,Light,D,2,Animal Crossing,Animal
+Jigglypuff,Brawler,No,Light,D,6,Pokemon,Fantasy
+Ken,Brawler,Yes,Heavy,A,2,Street Fighter,Human
+King Dedede,Brawler,Yes,Heavy,D,4,Kirby,Animal
+King K. Rool,Brawler,No,Heavy,C,2,Donkey Kong,Animal
+Kirby,Brawler,Yes,Light,D,6,Kirby,Fantasy
+Link,Sword,Yes,Normal,B,2,The Legend of Zelda,Human
+Little Mac,Brawler,No,Normal,D,2,Punch-Out,Human
+Lucario,Brawler,No,Light,C,2,Pokemon,Fantasy
+Lucas,Projectile,No,Light,B,2,Earthbound,Human
+Lucina,Sword,Yes,Normal,S,2,Fire Emblem,Human
+Mario,Brawler,Yes,Normal,S,2,Super Mario Bros,Human
+Marth,Sword,Yes,Normal,A,2,Fire Emblem,Human
+Mega Man,Projectile,No,Normal,B,2,Mega Man,Human
+Meta Knight,Sword,Yes,Light,B,6,Kirby,Fantasy
+Mewtwo,Projectile,No,Normal,B,2,Pokemon,Fantasy
+Mii Fighter,Brawler,Yes,Normal,D,2,Mii,Human
+Mr. Game & Watch,Brawler,Yes,Light,S,2,Game & Watch,Fantasy
+Ness,Projectile,No,Normal,B,2,Earthbound,Human
+Olimar,Projectile,No,Light,A,2,Picmin,Human
+Pac-Man,Projectile,Yes,Light,A,2,Picmin,Fantasy
+Palutena,Projectile,No,Normal,S,2,Kid Icarus,Human
+Peach,Projectile,Yes,Normal,S,2,Super Mario Bros,Human
+Pikachu,Brawler,No,Light,S,2,Pokemon,Fantasy
+Pirahna Plant,Brawler,Yes,Normal,C,2,Super Mario Bros,Animal
+Pit,Sword,No,Light,C,6,Kid Icarus,Human
+Pokemon Trainer,Brawler,Yes,Normal,S,6,Pokemon,Fantasy
+R.O.B.,Brawler,No,Heavy,A,2,NES,Fantasy
+Richter,Projectile,Yes,Normal,B,2,Castlevania,Human
+Ridley,Projectile,No,Heavy,C,3,Metroid,Fantasy
+Robin,Projectile,No,Normal,C,2,FIre Emblem,Human
+Rosalina & Luma,Projectile,No,Normal,C,2,Super Mario Bros,Fantasy
+Roy,Sword,Yes,Normal,A,2,FIre Emblem,Human
+Ryu,Brawler,Yes,Heavy,B,2,Street Fighter,Human
+Samus,Projectile,Yes,Normal,B,2,Metroid,Fantasy
+Sheik,Projectile,No,Light,A,2,The Legend of Zelda,Human
+Shulk,Sword,Yes,Normal,S,2,Xenoblade Chronicles,Human
+Simon,Projectile,Yes,Normal,B,2,Castlevania,Human
+Snake,Projectile,No,Heavy,A,2,Metal Gear Solid,Human
+Sonic,Brawler,Yes,Light,B,2,Sonic,Fantasy
+Toon Link,Sword,Yes,Light,B,2,THe Legend of Zelda,Human
+Villager,Projectile,No,Light,D,2,Animal Crossing,Human
+Wario,Brawler,No,Normal,S,2,Wario Ware,Human
+Wii Fit Trainer,Brawler,No,Normal,B,2,Wii Fit,Human
+Wolf,Brawler,No,Normal,S,2,Star Fox,Animal
+Yoshi,Brawler,No,Normal,S,2,Super Mario Bros,Fantasy
+Young Link,Sword,Yes,Light,B,2,The Legend of Zelda,Human
+Zelda,Projectile,Yes,Light,B,2,The Legend of Zelda,Human
+Zero Suit Samus,Brawler,Yes,Light,S,2,The Legend of Zelda,Human
+Byleth,Sword,Yes,Light,B,2,Fire Emblem,Human
+Banjo & Kazooie,Brawler,No,Heavy,B,3,Donkey Kong,Animal
+Hero,Sword,No,Normal,B,2,Dragon Quest,Human
+Joker,Projectile,No,Normal,S,2,Persona,Human
+Terry,Brawler,Yes,Heavy,A,2,King of Fighters,Human
