@@ -53,8 +53,6 @@ def getAnswers(question_dictionary: dict, question_type: str):
     elif question_type.lower() == "fight_style_questions":
         fightStyle(question_list)
 
-    return 2
-
 
 def playerExperience(question_list: list):
     total_points = 0
