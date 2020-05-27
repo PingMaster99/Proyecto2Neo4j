@@ -22,3 +22,8 @@ jumpQuestions = ["Me cuesta regresar al mapa cuando me caigo: (1) Si \n (2) No",
 sagaQuestions = ["Prefiero los videojuegos de: \n (1) Mario \n (2) Pokemon \n (3) Animal Crossing \n (4) Pikmin \n "
                  "(5) Fire Emblem \n (6) Zelda \n (7) Final Fantasy \n (8) Kid Icarus \n (9) Metroid \n "
                  "(10) No conozco estos juegos"]
+
+characterTypeQuestions = ["Me importa el diseño de mi personaje: \n (1) Si \n (2) No",
+                          "Me gustan las cosas de fantasia: \n (1) Si \n (2) No",
+                          "Me gustan los animales: \n (1) Si \n (2) No",
+                          "Prefiero jugar con personajes que son: \n (1) Humanos \n (2) Fantasticos \n (3) Animales"]
