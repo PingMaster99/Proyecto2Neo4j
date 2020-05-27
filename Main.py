@@ -41,5 +41,5 @@ for character in characterDict:
         a=Relationship(characterDict[character],"is",swordfighter)
         print(a)
     
-    characterDict[character]=Node("Character",name=characterDict[character][0],style=characterDict[character][1],oos=characterDict[character][2],weight=characterDict[character][3],tier=characterDict[character][4],jumps=characterDict[character][5],saga=characterDict[character][6],types=characterDict[character][7])
+    characterDict[character]=Node("Character", name=characterDict[character][0],style=characterDict[character][1],oos=characterDict[character][2],weight=characterDict[character][3],tier=characterDict[character][4],jumps=characterDict[character][5],saga=characterDict[character][6],types=characterDict[character][7])
     graph.create(characterDict[character])
