@@ -39,8 +39,8 @@ Mewtwo,Projectile,No,Normal,B,2,Pokemon,Fantasy
 Mii Fighter,Brawler,Yes,Normal,D,2,Mii,Human
 Mr. Game & Watch,Brawler,Yes,Light,S,2,Game & Watch,Fantasy
 Ness,Projectile,No,Normal,B,2,Earthbound,Human
-Olimar,Projectile,No,Light,A,2,Picmin,Human
-Pac-Man,Projectile,Yes,Light,A,2,Picmin,Fantasy
+Olimar,Projectile,No,Light,A,2,Pikmin,Human
+Pac-Man,Projectile,Yes,Light,A,2,Pikmin,Fantasy
 Palutena,Projectile,No,Normal,S,2,Kid Icarus,Human
 Peach,Projectile,Yes,Normal,S,2,Super Mario Bros,Human
 Pikachu,Brawler,No,Light,S,2,Pokemon,Fantasy
@@ -60,9 +60,9 @@ Shulk,Sword,Yes,Normal,S,2,Xenoblade Chronicles,Human
 Simon,Projectile,Yes,Normal,B,2,Castlevania,Human
 Snake,Projectile,No,Heavy,A,2,Metal Gear Solid,Human
 Sonic,Brawler,Yes,Light,B,2,Sonic,Fantasy
-Toon Link,Sword,Yes,Light,B,2,THe Legend of Zelda,Human
+Toon Link,Sword,Yes,Light,B,2,The Legend of Zelda,Human
 Villager,Projectile,No,Light,D,2,Animal Crossing,Human
-Wario,Brawler,No,Normal,S,2,Wario Ware,Human
+Wario,Brawler,No,Normal,S,2,Super Mario Bros,Human
 Wii Fit Trainer,Brawler,No,Normal,B,2,Wii Fit,Human
 Wolf,Brawler,No,Normal,S,2,Star Fox,Animal
 Yoshi,Brawler,No,Normal,S,2,Super Mario Bros,Fantasy
