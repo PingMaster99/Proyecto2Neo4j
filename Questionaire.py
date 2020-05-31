@@ -186,12 +186,9 @@ def outOfShield(question_list: list):
     else:
         user_preferences["out_of_shield"] = "No"
 
-"""Calculates player tier preference"""Calculates player experience with the game
+"""Calculates player tier preference
 Args:
     *question_list (list)
-Returns:
-    **
-"""
 Args:
     *question_list (list)
 Returns:
