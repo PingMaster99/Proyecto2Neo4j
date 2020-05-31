@@ -35,7 +35,7 @@ def sagaRecommendation(user_preferences: dict, matcher: NodeMatcher):
 
 
 def typeRecommendation(user_preferences: dict, matcher: NodeMatcher):
-    style = "_.style=~ '{:s}'".format(user_preferences["fight_style"])
+    style = "_.types=~ '{:s}'".format(user_preferences["character_type"])
     equal_styles = list(matcher.match("Character").where(style))
     if len(equal_styles) > 0:
         print("Personajes que podrian interesarte por su diseño: ")
