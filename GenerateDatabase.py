@@ -3,7 +3,7 @@ from py2neo import Graph, Node, Relationship, NodeMatcher
 # Python comment
 """
  IMPORTANT!!! If your neo4j conection has another localhost, user, or password,
- you need to change it in the next line of code for the program to work
+ you need to change it in the next line of code for the program to work 
 """
 db = Graph(uri="bolt://localhost:7687", user="neo4j", password="1234")
 
