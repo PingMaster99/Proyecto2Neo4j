@@ -12,6 +12,12 @@ matcher = NodeMatcher(db)
 
 
 def generateDatabase():
+    """Generates Neo4j database for Smash Bros. Main recommendation system
+    Args:
+        **
+    Returns:
+        **
+    """
     # we open the csv file and create a dictionary of key = character names and value = list with attributes
     with open('smashCSV.csv') as csv_file:
         csv_reader = csv.reader(csv_file, delimiter=',')
@@ -177,6 +183,12 @@ def generateDatabase():
 
 
 def generateUser(user_preferences: dict):
+    """Generates the user in the database
+    Args:
+        *user_preferences (dict)
+    Returns:
+        **
+    """
     user = Node("User", experience=user_preferences["experience"], style=user_preferences["fight_style"],
                 weight=user_preferences["speed_and_weight"], oos=user_preferences["out_of_shield"],
                 tier=user_preferences["tier"], jumps=user_preferences["jump"], saga=user_preferences["saga"],
@@ -300,6 +312,12 @@ def generateUser(user_preferences: dict):
 
 
 def delete():
+    """ Deletes everything from the database
+    Args:
+        **
+    Returns:
+        **
+    """
     db.delete_all()
 
 # Connecting nodes for the database
