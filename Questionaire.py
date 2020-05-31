@@ -85,7 +85,7 @@ def getAnswers(question_dictionary: dict):
 
 def playerExperience(question_list: list):
     total_points = 0
-    print("En esta seccion de preguntas, veremos tu nivel en el juego\n")
+    print("Bienvenido, aquí comienza el cuestionario. Ingrese su respuesta en la seccion indicada por '>>'\n")
 
     # Question 1
     total_points = twoOptionInput(total_points, 5, question_list[0])  # Question with a weight of 5
@@ -115,11 +115,11 @@ def fightStyle(question_list: list):
     total_points = multipleOptionInput(total_points, 3, question_list[1], 1, 3)  # Question with a weight of 3
 
     if total_points >= 19:
-        user_preferences["fight_style"] = "projectiles"
+        user_preferences["fight_style"] = "Projectile"
     elif total_points >= 9:
-        user_preferences["fight_style"] = "sword"
+        user_preferences["fight_style"] = "Sword"
     else:
-        user_preferences["fight_style"] = "brawler"
+        user_preferences["fight_style"] = "Brawler"
 
 
 def speedOfPlay(question_list: list):
@@ -133,11 +133,11 @@ def speedOfPlay(question_list: list):
     total_points = twoOptionInput(total_points, 5, question_list[2])  # Weight of 5
 
     if total_points >= 14:
-        user_preferences["speed_and_weight"] = "light"
+        user_preferences["speed_and_weight"] = "Light"
     elif total_points >= 6:
-        user_preferences["speed_and_weight"] = "normal"
+        user_preferences["speed_and_weight"] = "Normal"
     else:
-        user_preferences["speed_and_weight"] = "heavy"
+        user_preferences["speed_and_weight"] = "Heavy"
 
 
 def outOfShield(question_list: list):
@@ -151,9 +151,9 @@ def outOfShield(question_list: list):
     total_points = twoOptionInput(total_points, 7, question_list[2])
 
     if total_points >= 7:
-        user_preferences["out_of_shield"] = True
+        user_preferences["out_of_shield"] = "Yes"
     else:
-        user_preferences["out_of_shield"] = False
+        user_preferences["out_of_shield"] = "No"
 
 
 def tier(question_list: list):
@@ -166,15 +166,15 @@ def tier(question_list: list):
     total_points = multipleOptionInput(total_points, 10, question_list[2], 1, 5)  # Weight 10
 
     if total_points == 110:
-        user_preferences["tier"] = "s"
+        user_preferences["tier"] = "S"
     elif total_points == 120:
-        user_preferences["tier"] = "a"
+        user_preferences["tier"] = "A"
     elif total_points == 130:
-        user_preferences["tier"] = "b"
+        user_preferences["tier"] = "B"
     elif total_points == 140:
-        user_preferences["tier"] = "c"
+        user_preferences["tier"] = "C"
     elif total_points == 150:
-        user_preferences["tier"] = "d"
+        user_preferences["tier"] = "D"
 
 
 def jumps(question_list: list):
@@ -187,19 +187,19 @@ def jumps(question_list: list):
     total_points = multipleOptionInput(total_points, 10, question_list[1], 2, 5)
 
     if total_points >= 50:
-        user_preferences["jump"] = 6
+        user_preferences["jump"] = "6"
     elif total_points >= 40:
-        user_preferences["jump"] = 4
+        user_preferences["jump"] = "4"
     elif total_points >= 30:
-        user_preferences["jump"] = 3
+        user_preferences["jump"] = "3"
     else:
-        user_preferences["jump"] = 2
+        user_preferences["jump"] = "2"
 
 
 def saga(question_list: list):
     total_points = multipleOptionInput(0, 1, question_list[0], 1, 32)
     if total_points != 32:
-        user_preferences["saga"] = total_points
+        user_preferences["saga"] = saga_dictionary[total_points]
 
 
 def characterType(question_list: list):
@@ -218,11 +218,11 @@ def characterType(question_list: list):
     total_points = multipleOptionInput(total_points, 20, question_list[3], 1, 3)  # Weight 20
 
     if total_points >= 160:
-        user_preferences["character_type"] = "fantastic"
+        user_preferences["character_type"] = "Fantasy"
     elif total_points >= 140:
-        user_preferences["character_type"] = "animal"
+        user_preferences["character_type"] = "Animal"
     elif total_points > 100:
-        user_preferences["character_type"] = "human"
+        user_preferences["character_type"] = "Human"
 
 
 def verifyInput(user_input: int, minimum: int, maximum: int):

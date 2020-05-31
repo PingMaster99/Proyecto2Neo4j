@@ -1,4 +1,3 @@
-from IPython.display import IFrame
 import json
 import uuid
 
@@ -110,3 +109,5 @@ def draw(graph, options, physics=False, limit=100):
             edges.append({"from": source_info["id"], "to": target_info["id"], "label": rel.type()})
 
     return vis_network(nodes, edges, physics=physics)
+
+
