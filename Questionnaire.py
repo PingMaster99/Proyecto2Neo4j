@@ -1,6 +1,17 @@
 # Questions used to get the user preferences
 """
- Dictionary that contains questions for the recommendation
+Questionnaire.py
+------------------
+Methods used to get user preferences in a Smash Bros character
+------------------
+Authors:
+      Alejandro Alvarez (alejandroav93)
+      Joonho Kim (jkmolina)
+      Pablo Ruiz (PingMaster99)
+Date:
+      30.05.2020
+Version:
+      1.0.0
 """
 recommendationQuestions = {
     "player_experience_questions": [

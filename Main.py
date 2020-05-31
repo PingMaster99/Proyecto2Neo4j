@@ -1,6 +1,20 @@
 import GenerateDatabase as database
 import Recommender as recommender
-from Questionaire import getAnswers, recommendationQuestions
+from Questionnaire import getAnswers, recommendationQuestions
+"""
+Main.py
+------------------
+Main file to run the Smash Bros Main Recommendation
+------------------
+Authors: 
+      Alejandro Alvarez (alejandroav93)
+      Joonho Kim (jkmolina)
+      Pablo Ruiz (PingMaster99)
+Date: 
+      30.05.2020
+Version: 
+      1.0.0
+"""
 
 # Prints welcome message, instructions, and ASCII art
 print("**************************************************************************\n"
@@ -56,5 +70,5 @@ if user_preferences["experience"] == "casual" or user_preferences["experience"] 
         recommender.typeRecommendation(user_preferences, database.matcher)
 
 # Program ending
-input("Presione enter para salir")
+input("Presione enter para salir\n")
 print("Gracias por utilizar el sistema de recomendacion de Smash Bros Ultimate :D")

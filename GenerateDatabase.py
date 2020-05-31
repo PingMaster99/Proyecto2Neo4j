@@ -1,6 +1,21 @@
 import csv
 from py2neo import Graph, Node, Relationship, NodeMatcher
-# Python comment
+"""
+GenerateDatabase.py
+------------------
+Functions used to generate the database in Neo4j
+------------------
+Authors: 
+      Alejandro Alvarez (alejandroav93)
+      Joonho Kim (jkmolina)
+      Pablo Ruiz (PingMaster99)
+Date: 
+      30.05.2020
+Version: 
+      1.0.0
+"""
+
+
 """
  IMPORTANT!!! If your neo4j conection has another localhost, user, or password,
  you need to change it in the next line of code for the program to work 
@@ -387,5 +402,3 @@ mii = Node("Saga", name="Mii")
 human = Node("Type", name="Human")
 fantasy = Node("Type", name="Fantasy")
 animal = Node("Type", name="Animal")
-
-user_list = []

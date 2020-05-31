@@ -1,4 +1,18 @@
 from py2neo import NodeMatcher
+"""
+Recommeder.py
+------------------
+Methods used to get the recommendations according to user's preferences 
+------------------
+Authors: 
+      Alejandro Alvarez (alejandroav93)
+      Joonho Kim (jkmolina)
+      Pablo Ruiz (PingMaster99)
+Date: 
+      30.05.2020
+Version: 
+      1.0.0
+"""
 
 
 def styleRecommendation(user_preferences: dict, matcher: NodeMatcher):
