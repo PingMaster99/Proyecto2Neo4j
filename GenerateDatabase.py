@@ -15,7 +15,6 @@ Version:
       1.0.0
 """
 
-
 """
  IMPORTANT!!! If your neo4j conection has another localhost, user, or password,
  you need to change it in the next line of code for the program to work 
