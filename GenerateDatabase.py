@@ -58,53 +58,53 @@ def generateDatabase():
         # now we look for the match to put characters on their respective category: brawler, swordfighter, gunner
         if indicator == "brawler":
             db.create(Relationship(characterDict[character], "is", brawler))
-        if indicator == "swordfighter":
+        elif indicator == "swordfighter":
             db.create(Relationship(characterDict[character], "is", swordfighter))
-        if indicator == "projectile":
+        elif indicator == "projectile":
             db.create(Relationship(characterDict[character], "is", gunner))
 
         # up b out of shield
         if oos == "Yes":
             db.create(Relationship(characterDict[character], "has_oos", hasOOS))
-        if oos == "No":
+        elif oos == "No":
             db.create(Relationship(characterDict[character], "has_oos", noOOS))
 
         # weight
         if weight == "Heavy":
             db.create(Relationship(characterDict[character], "weight", heavyweight))
-        if weight == "Normal":
+        elif weight == "Normal":
             db.create(Relationship(characterDict[character], "weight", mediumweight))
-        if weight == "Light":
+        elif weight == "Light":
             db.create(Relationship(characterDict[character], "weight", lightweight))
 
         # tier
         if tier == "A":
             db.create(Relationship(characterDict[character], "tier", atier))
-        if tier == "S":
+        elif tier == "S":
             db.create(Relationship(characterDict[character], "tier", stier))
-        if tier == "B":
+        elif tier == "B":
             db.create(Relationship(characterDict[character], "tier", btier))
-        if tier == "C":
+        elif tier == "C":
             db.create(Relationship(characterDict[character], "tier", ctier))
-        if tier == "D":
+        elif tier == "D":
             db.create(Relationship(characterDict[character], "tier", dtier))
 
         # jumps
         if jumps == "2":
             db.create(Relationship(characterDict[character], "jumps", twoJumps))
-        if jumps == "3":
+        elif jumps == "3":
             db.create(Relationship(characterDict[character], "jumps", threeJumps))
-        if jumps == "4":
+        elif jumps == "4":
             db.create(Relationship(characterDict[character], "jumps", fourJumps))
-        if jumps == "6":
+        elif jumps == "6":
             db.create(Relationship(characterDict[character], "jumps", sixJumps))
 
         # type
         if types == "Human":
             db.create(Relationship(characterDict[character], "type", human))
-        if types == "Fantasy":
+        elif types == "Fantasy":
             db.create(Relationship(characterDict[character], "type", fantasy))
-        if types == "Animal":
+        elif types == "Animal":
             db.create(Relationship(characterDict[character], "type", animal))
 
         # saga
@@ -303,6 +303,7 @@ def delete():
     db.delete_all()
 
 # Connecting nodes for the database
+
 
 # fight style
 brawler = Node("Style", name="Brawler")
