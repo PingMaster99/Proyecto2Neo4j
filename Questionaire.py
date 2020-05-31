@@ -1,4 +1,7 @@
 # Questions used to get the user preferences
+"""
+ Python comment
+"""
 recommendationQuestions = {
     "player_experience_questions": [
         "He jugado Super Smash Bros antes: \n (1) Si \n (2) No \n>> ",
@@ -53,8 +56,12 @@ recommendationQuestions = {
 user_preferences = {"experience": None, "fight_style": None, "speed_and_weight": None, "out_of_shield": None,
                     "tier": None, "jump": None, "saga": None, "character_type": None}
 
-saga_dictionary = {1: "Starfox", 2: "Bayonetta", 3: "Super Mario Bros", 4: "F-Zero", 5: "Fire Emblem", 6: "Kid Icarus",
-                   7: "Donkey Kong", 8: "Duck Hunt", 9: "Metroid", 10: "The Legend of Zelda"}
+saga_dictionary = {1: "Star Fox", 2: "Bayonetta", 3: "Super Mario Bros", 4: "F-Zero", 5: "Fire Emblem", 6: "Kid Icarus",
+                   7: "Donkey Kong", 8: "Duck Hunt", 9: "Metroid", 10: "The Legend of Zelda", 11: "Pokemon",
+                   12: "Ice Climbers", 13: "Splatoon", 14: "Animal Crossing", 15: "Street Fighter",
+                   16: "King of Fighters", 17: "Kirby", 18: "Punch-Out", 19: "Mega Man", 20: "Game & Watch",
+                   21: "Earthbound", 22: "Pikmin", 23: "NES", 24: "Castlevania", 25: "Xenoblade Chronicles",
+                   26: "Metal Gear Solid", 27: "Wii Fit", 28: "Sonic", 29: "Dragon Quest", 30: "Persona", 31: "Mii"}
 
 
 def getAnswers(question_dictionary: dict):

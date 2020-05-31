@@ -1,19 +1,14 @@
 import csv
 from neo4j import GraphDatabase
 from py2neo import Graph, Node, Relationship, Database, NodeMatcher
-
-
-# graph = Graph()
-# driver = GraphDatabase.driver(uri="bolt://localhost:7687", auth=("neo4j", "1234"), encrypted=False)
-# db=Graph("http://neo4j:1234@127.0.0.1:7474/db/data")
-
-
-# ESTE CUESTIONARIO LO AGREGAMOS AL FINAL
-
-# uri=input("¡Es hora de iniciar! ¿Cual es su URI?\n")
-# user=input("¿Cual es su usuario?\n")
-# password=input("¿Cual es su password?\n")
+# Python comment
+"""
+ IMPORTANT!!! If your neo4j conection has another localhost, user, or password,
+ you need to change it in the next line of code for the program to work
+"""
 db = Graph(uri="bolt://localhost:7687", user="neo4j", password="1234")
+
+# Node matcher
 matcher = NodeMatcher(db)
 # here we create our database. we start with the the main connecting nodes
 
@@ -336,67 +331,67 @@ def generateUser(user_preferences: dict):
 
     # Saga
     saga = user_preferences["saga"]
-    if saga == 1:
+    if saga == "Star Fox":
         db.create(Relationship(user, "saga", starfox))
-    elif saga == 2:
+    elif saga == "Bayonetta":
         db.create(Relationship(user, "saga", bayonetta))
-    elif saga == 3:
+    elif saga == "Super Mario Bros":
         db.create(Relationship(user, "saga", supermariobros))
-    elif saga == 4:
+    elif saga == "F-Zero":
         db.create(Relationship(user, "saga", fzero))
-    elif saga == 5:
+    elif saga == "Fire Emblem":
         db.create(Relationship(user, "saga", fireemblem))
-    elif saga == 6:
+    elif saga == "Kid Icarus":
         db.create(Relationship(user, "saga", kidicarus))
-    elif saga == 7:
+    elif saga == "Donkey Kong":
         db.create(Relationship(user, "saga", donkeykong))
-    elif saga == 8:
+    elif saga == "Duck Hunt":
         db.create(Relationship(user, "saga", duckhunt))
-    elif saga == 9:
+    elif saga == "Metroid":
         db.create(Relationship(user, "saga", metroid))
-    elif saga == 10:
+    elif saga == "The Legend of Zelda":
         db.create(Relationship(user, "saga", zelda))
-    elif saga == 11:
+    elif saga == "Pokemon":
         db.create(Relationship(user, "saga", pokemon))
-    elif saga == 12:
+    elif saga == "Ice Climbers":
         db.create(Relationship(user, "saga", iceclimbers))
-    elif saga == 13:
+    elif saga == "Splatoon":
         db.create(Relationship(user, "saga", splatoon))
-    elif saga == 14:
+    elif saga == "Animal Crossing":
         db.create(Relationship(user, "saga", animalcrossing))
-    elif saga == 15:
+    elif saga == "Street Fighter":
         db.create(Relationship(user, "saga", streetfighter))
-    elif saga == 16:
+    elif saga == "King of Fighters":
         db.create(Relationship(user, "saga", kingoffighters))
-    elif saga == 17:
+    elif saga == "Kirby":
         db.create(Relationship(user, "saga", kirby))
-    elif saga == 18:
+    elif saga == "Punch-Out":
         db.create(Relationship(user, "saga", punchout))
-    elif saga == 19:
+    elif saga == "Mega Man":
         db.create(Relationship(user, "saga", megaman))
-    elif saga == 20:
+    elif saga == "Game & Watch":
         db.create(Relationship(user, "saga", gameandwatch))
-    elif saga == 21:
+    elif saga == "Earthbound":
         db.create(Relationship(user, "saga", earthbound))
-    elif saga == 22:
+    elif saga == "Pikmin":
         db.create(Relationship(user, "saga", pikmin))
-    elif saga == 23:
+    elif saga == "NES":
         db.create(Relationship(user, "saga", nes))
-    elif saga == 24:
+    elif saga == "Castlevania":
         db.create(Relationship(user, "saga", castlevania))
-    elif saga == 25:
+    elif saga == "Xenoblade Chronicles":
         db.create(Relationship(user, "saga", xenoblade))
-    elif saga == 26:
+    elif saga == "Metal Gear Solid":
         db.create(Relationship(user, "saga", metalgearsolid))
-    elif saga == 27:
+    elif saga == "Wii Fit":
         db.create(Relationship(user, "saga", wiifit))
-    elif saga == 28:
+    elif saga == "Sonic":
         db.create(Relationship(user, "saga", sonic))
-    elif saga == 29:
+    elif saga == "Dragon Quest":
         db.create(Relationship(user, "saga", dragonquest))
-    elif saga == 30:
+    elif saga == "Persona":
         db.create(Relationship(user, "saga", persona))
-    elif saga == 31:
+    elif saga == "Mii":
         db.create(Relationship(user, "saga", mii))
 
 
