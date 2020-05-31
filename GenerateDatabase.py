@@ -9,74 +9,7 @@ db = Graph(uri="bolt://localhost:7687", user="neo4j", password="1234")
 
 # Node matcher
 matcher = NodeMatcher(db)
-# here we create our database. we start with the the main connecting nodes
 
-# fight style
-brawler = Node("Style", name="Brawler")
-swordfighter = Node("Style", name="Swordfighter")
-gunner = Node("Style", name="Gunner")
-
-# Up b out of shield
-hasOOS = Node("OOS", name="Has_OOS")
-noOOS = Node("OOS", name="No_OOS")
-
-# weight
-lightweight = Node("Weight", name="Lightweight")
-mediumweight = Node("Weight", name="Mediumweight")
-heavyweight = Node("Weight", name="Heavyweight")
-
-# tier
-stier = Node("Tier", name="S Tier")
-atier = Node("Tier", name="A Tier")
-btier = Node("Tier", name="B Tier")
-ctier = Node("Tier", name="C Tier")
-dtier = Node("Tier", name="D Tier")
-
-# jumps
-twoJumps = Node("Jumps", name="Two Jumps")
-threeJumps = Node("Jumps", name="Three Jumps")
-fourJumps = Node("Jumps", name="Four Jumps")
-sixJumps = Node("Jumps", name="Six Jumps")
-
-# sagas
-starfox = Node("Saga", name="Starfox")
-bayonetta = Node("Saga", name="Bayonetta")
-supermariobros = Node("Saga", name="Super Mario Bros")
-fzero = Node("Saga", name="F-Zero")
-fireemblem = Node("Saga", name="Fire Emblem")
-kidicarus = Node("Saga", name="Kid Icarus")
-donkeykong = Node("Saga", name="Donkey Kong")
-duckhunt = Node("Saga", name="Duck Hunt")
-metroid = Node("Saga", name="Metroid")
-zelda = Node("Saga", name="The Legend of Zelda")
-pokemon = Node("Saga", name="Pokemon")
-iceclimbers = Node("Saga", name="Ice Climbers")
-splatoon = Node("Saga", name="Splatoon")
-animalcrossing = Node("Saga", name="Animal Crossing")
-streetfighter = Node("Saga", name="Street Fighter")
-kingoffighters = Node("Saga", name="King of Fighters")
-kirby = Node("Saga", name="Kirby")
-punchout = Node("Saga", name="Punch-Out!")
-megaman = Node("Saga", name="Mega Man")
-gameandwatch = Node("Saga", name="Game and Watch")
-earthbound = Node("Saga", name="Earthbound")
-pikmin = Node("Saga", name="Pikmin")
-nes = Node("Saga", name="N.E.S.")
-castlevania = Node("Saga", name="Castlevania")
-xenoblade = Node("Saga", name="Xenoblade Chronicles")
-metalgearsolid = Node("Saga", name="Metal Gear Solid")
-wiifit = Node("Saga", name="Wii Fit")
-sonic = Node("Saga", name="Sonic")
-dragonquest = Node("Saga", name="Dragon Quest")
-persona = Node("Saga", name="Persona")
-mii = Node("Saga", name="Mii")
-
-# Type
-human = Node("Type", name="Human")
-fantasy = Node("Type", name="Fantasy")
-animal = Node("Type", name="Animal")
-
-user_list = []
 
 def generateDatabase():
     # we open the csv file and create a dictionary of key = character names and value = list with attributes
@@ -368,3 +301,72 @@ def generateUser(user_preferences: dict):
 
 def delete():
     db.delete_all()
+
+# Connecting nodes for the database
+
+# fight style
+brawler = Node("Style", name="Brawler")
+swordfighter = Node("Style", name="Swordfighter")
+gunner = Node("Style", name="Gunner")
+
+# Up b out of shield
+hasOOS = Node("OOS", name="Has_OOS")
+noOOS = Node("OOS", name="No_OOS")
+
+# weight
+lightweight = Node("Weight", name="Lightweight")
+mediumweight = Node("Weight", name="Mediumweight")
+heavyweight = Node("Weight", name="Heavyweight")
+
+# tier
+stier = Node("Tier", name="S Tier")
+atier = Node("Tier", name="A Tier")
+btier = Node("Tier", name="B Tier")
+ctier = Node("Tier", name="C Tier")
+dtier = Node("Tier", name="D Tier")
+
+# jumps
+twoJumps = Node("Jumps", name="Two Jumps")
+threeJumps = Node("Jumps", name="Three Jumps")
+fourJumps = Node("Jumps", name="Four Jumps")
+sixJumps = Node("Jumps", name="Six Jumps")
+
+# sagas
+starfox = Node("Saga", name="Starfox")
+bayonetta = Node("Saga", name="Bayonetta")
+supermariobros = Node("Saga", name="Super Mario Bros")
+fzero = Node("Saga", name="F-Zero")
+fireemblem = Node("Saga", name="Fire Emblem")
+kidicarus = Node("Saga", name="Kid Icarus")
+donkeykong = Node("Saga", name="Donkey Kong")
+duckhunt = Node("Saga", name="Duck Hunt")
+metroid = Node("Saga", name="Metroid")
+zelda = Node("Saga", name="The Legend of Zelda")
+pokemon = Node("Saga", name="Pokemon")
+iceclimbers = Node("Saga", name="Ice Climbers")
+splatoon = Node("Saga", name="Splatoon")
+animalcrossing = Node("Saga", name="Animal Crossing")
+streetfighter = Node("Saga", name="Street Fighter")
+kingoffighters = Node("Saga", name="King of Fighters")
+kirby = Node("Saga", name="Kirby")
+punchout = Node("Saga", name="Punch-Out!")
+megaman = Node("Saga", name="Mega Man")
+gameandwatch = Node("Saga", name="Game and Watch")
+earthbound = Node("Saga", name="Earthbound")
+pikmin = Node("Saga", name="Pikmin")
+nes = Node("Saga", name="N.E.S.")
+castlevania = Node("Saga", name="Castlevania")
+xenoblade = Node("Saga", name="Xenoblade Chronicles")
+metalgearsolid = Node("Saga", name="Metal Gear Solid")
+wiifit = Node("Saga", name="Wii Fit")
+sonic = Node("Saga", name="Sonic")
+dragonquest = Node("Saga", name="Dragon Quest")
+persona = Node("Saga", name="Persona")
+mii = Node("Saga", name="Mii")
+
+# Type
+human = Node("Type", name="Human")
+fantasy = Node("Type", name="Fantasy")
+animal = Node("Type", name="Animal")
+
+user_list = []
