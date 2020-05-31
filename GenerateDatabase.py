@@ -1,6 +1,5 @@
 import csv
-from neo4j import GraphDatabase
-from py2neo import Graph, Node, Relationship, Database, NodeMatcher
+from py2neo import Graph, Node, Relationship, NodeMatcher
 # Python comment
 """
  IMPORTANT!!! If your neo4j conection has another localhost, user, or password,
@@ -78,7 +77,6 @@ fantasy = Node("Type", name="Fantasy")
 animal = Node("Type", name="Animal")
 
 user_list = []
-player_experience = ""
 
 def generateDatabase():
     # we open the csv file and create a dictionary of key = character names and value = list with attributes
@@ -277,7 +275,6 @@ def generateUser(user_preferences: dict):
                 tier=user_preferences["tier"], jumps=user_preferences["jump"], saga=user_preferences["saga"],
                 types=user_preferences["character_type"])
     db.create(user)
-    player_experience = user_preferences["experience"]
 
     # Fight style
     if user_preferences["fight_style"] == "Brawler":
@@ -393,6 +390,7 @@ def generateUser(user_preferences: dict):
         db.create(Relationship(user, "saga", persona))
     elif saga == "Mii":
         db.create(Relationship(user, "saga", mii))
+
 
 
 def delete():
