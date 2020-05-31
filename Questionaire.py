@@ -113,8 +113,7 @@ def playerExperience(question_list: list):
 
 def fightStyle(question_list: list):
     total_points = 0
-    print("En esta seccion, estudiaremos tu estilo de pelea\n")
-
+    
     # Question 1
     total_points = multipleOptionInput(total_points, 5, question_list[0], 1, 3)  # Question with a weight of 5
 
