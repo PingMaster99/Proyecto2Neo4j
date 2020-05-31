@@ -71,10 +71,11 @@ def typeRecommendation(user_preferences: dict, matcher: NodeMatcher):
         print("Personajes que podrian interesarte por su diseño: ")
         printRecommendation(equal_styles, 2)
 
-"""Calculates a recommendation based on the player's way of playing/fighting
+"""Calculates a recommendation based on the player's responses (when none matches an existing character)
 Args:
     *user_preferences (dict)
     *matcher (NodeMatcher)
+    *playerExperience (str)
 Returns:
     **
 """
@@ -108,7 +109,13 @@ def mainRecommendation(user_preferences: dict, matcher: NodeMatcher, playerExper
         equal_styles = list(matcher.match("Character").where(style).where(weight))
     printRecommendation(equal_styles, 3)
 
-
+"""Prints recommendation for a player based on preferences
+Args:
+    *recommendation_list (list)
+    *total_number (int)
+Returns:
+    **
+"""
 def printRecommendation(recommendation_list: list, total_number: int):
     total = 0
     for character in recommendation_list:

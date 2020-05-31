@@ -55,7 +55,7 @@ recommendationQuestions = {
 # User preferences used to generate a user node in the database
 user_preferences = {"experience": None, "fight_style": None, "speed_and_weight": None, "out_of_shield": None,
                     "tier": None, "jump": None, "saga": None, "character_type": None}
-
+#Available Sagas
 saga_dictionary = {1: "Star Fox", 2: "Bayonetta", 3: "Super Mario Bros", 4: "F-Zero", 5: "Fire Emblem", 6: "Kid Icarus",
                    7: "Donkey Kong", 8: "Duck Hunt", 9: "Metroid", 10: "The Legend of Zelda", 11: "Pokemon",
                    12: "Ice Climbers", 13: "Splatoon", 14: "Animal Crossing", 15: "Street Fighter",
@@ -63,7 +63,12 @@ saga_dictionary = {1: "Star Fox", 2: "Bayonetta", 3: "Super Mario Bros", 4: "F-Z
                    21: "Earthbound", 22: "Pikmin", 23: "NES", 24: "Castlevania", 25: "Xenoblade Chronicles",
                    26: "Metal Gear Solid", 27: "Wii Fit", 28: "Sonic", 29: "Dragon Quest", 30: "Persona", 31: "Mii"}
 
-
+"""Returns player answers
+Args:
+    *question_dictionary (dict)
+Returns:
+    user_preferences
+"""
 def getAnswers(question_dictionary: dict):
     keys = question_dictionary.keys()
     for question_type in keys:
@@ -89,7 +94,12 @@ def getAnswers(question_dictionary: dict):
             print("No es un atributo valido para clasificar personajes ")
     return user_preferences
 
-
+"""Calculates player experience with the game
+Args:
+    *question_list (list)
+Returns:
+    **
+"""
 def playerExperience(question_list: list):
     total_points = 0
     print("Bienvenido, aquí comienza el cuestionario. Ingrese su respuesta en la seccion indicada por '>>'\n")
@@ -110,7 +120,12 @@ def playerExperience(question_list: list):
     else:
         user_preferences["experience"] = "new"
 
-
+"""Calculates player fightstyle
+Args:
+    *question_list (list)
+Returns:
+    **
+"""
 def fightStyle(question_list: list):
     total_points = 0
 
@@ -127,7 +142,12 @@ def fightStyle(question_list: list):
     else:
         user_preferences["fight_style"] = "Brawler"
 
-
+"""Calculates player character's speed preference
+Args:
+    *question_list (list)
+Returns:
+    **
+"""
 def speedOfPlay(question_list: list):
     total_points = 0
 
@@ -145,7 +165,12 @@ def speedOfPlay(question_list: list):
     else:
         user_preferences["speed_and_weight"] = "Heavy"
 
-
+"""Calculates player preference for oos 
+Args:
+    *question_list (list)
+Returns:
+    **
+"""
 def outOfShield(question_list: list):
     total_points = 0
 
@@ -161,7 +186,17 @@ def outOfShield(question_list: list):
     else:
         user_preferences["out_of_shield"] = "No"
 
-
+"""Calculates player tier preference"""Calculates player experience with the game
+Args:
+    *question_list (list)
+Returns:
+    **
+"""
+Args:
+    *question_list (list)
+Returns:
+    **
+"""
 def tier(question_list: list):
     total_points = 0
     # Question 1
@@ -182,7 +217,12 @@ def tier(question_list: list):
     elif total_points == 150:
         user_preferences["tier"] = "D"
 
-
+"""Calculates player preference for amount of jumps in a character
+Args:
+    *question_list (list)
+Returns:
+    **
+"""
 def jumps(question_list: list):
     total_points = 0
 
@@ -201,13 +241,23 @@ def jumps(question_list: list):
     else:
         user_preferences["jump"] = "2"
 
-
+"""Calculates player affinity for a saga
+Args:
+    *question_list (list)
+Returns:
+    **
+"""
 def saga(question_list: list):
     total_points = multipleOptionInput(0, 1, question_list[0], 1, 32)
     if total_points != 32:
         user_preferences["saga"] = saga_dictionary[total_points]
 
-
+"""Calculates player character type affinity 
+Args:
+    *question_list (list)
+Returns:
+    **
+"""
 def characterType(question_list: list):
     total_points = 0
 
@@ -230,14 +280,28 @@ def characterType(question_list: list):
     elif total_points > 100:
         user_preferences["character_type"] = "Human"
 
-
+"""Verifies if input is valid
+Args:
+    *user_input (int)
+    *minimum (int)
+    *maximum (int)
+Returns:
+    true/false (boolean)
+"""
 def verifyInput(user_input: int, minimum: int, maximum: int):
     if minimum <= user_input <= maximum:
         return True
     else:
         return False
 
-
+"""Calculates weight in two option question/answer
+Args:
+    *point_total (int)
+    *weight (int)
+    *question (str)
+Returns:
+    point_total (int): weight amount based on answers
+"""
 def twoOptionInput(point_total: int, weight: int, question: str):
     user_input = -1
     while not verifyInput(user_input, 1, 2):
@@ -249,7 +313,16 @@ def twoOptionInput(point_total: int, weight: int, question: str):
         point_total += (1 * weight)
     return point_total
 
-
+"""Calculates weight in multiple option question/answer
+Args:
+    *point_total (int)
+    *weight (int)
+    *question (str)
+    *min_value (int)
+    *max_value (int)
+Returns:
+    point_total (int): weight amount based on answers
+"""
 def multipleOptionInput(point_total: int, weight: int, question: str, min_value: int, max_value: int):
     user_input = -1
     while not verifyInput(user_input, min_value, max_value):
