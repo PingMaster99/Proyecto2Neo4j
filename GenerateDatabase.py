@@ -90,18 +90,12 @@ def generateDatabase():
     characterDict.pop("Name")
 
     # we create the main node relationships: brawler, swordfighter and gunner
-    bs = Relationship(brawler, "connectedTo", swordfighter)
-    db.create(bs)
-    sb = Relationship(swordfighter, "connectedTo", brawler)
-    db.create(sb)
-    bg = Relationship(brawler, "connectedTo", gunner)
-    db.create(bg)
-    gb = Relationship(gunner, "connectedTo", brawler)
-    db.create(gb)
-    sg = Relationship(gunner, "connectedTo", swordfighter)
-    db.create(sg)
-    gs = Relationship(swordfighter, "connectedTo", gunner)
-    db.create(gs)
+    db.create(Relationship(brawler, "connectedTo", swordfighter))
+    db.create(Relationship(swordfighter, "connectedTo", brawler))
+    db.create(Relationship(brawler, "connectedTo", gunner))
+    db.create(Relationship(gunner, "connectedTo", brawler))
+    db.create(Relationship(gunner, "connectedTo", swordfighter))
+    db.create(Relationship(swordfighter, "connectedTo", gunner))
 
     # we need to know which category each character belongs to
     for character in characterDict:
@@ -130,75 +124,55 @@ def generateDatabase():
 
         # now we look for the match to put characters on their respective category: brawler, swordfighter, gunner
         if indicator == "brawler":
-            a = Relationship(characterDict[character], "is", brawler)
-            db.create(a)
+            db.create(Relationship(characterDict[character], "is", brawler))
         if indicator == "swordfighter":
-            a = Relationship(characterDict[character], "is", swordfighter)
-            db.create(a)
+            db.create(Relationship(characterDict[character], "is", swordfighter))
         if indicator == "projectile":
-            a = Relationship(characterDict[character], "is", gunner)
-            db.create(a)
+            db.create(Relationship(characterDict[character], "is", gunner))
 
         # up b out of shield
         if oos == "Yes":
-            a = Relationship(characterDict[character], "has_oos", hasOOS)
-            db.create(a)
+            db.create(Relationship(characterDict[character], "has_oos", hasOOS))
         if oos == "No":
-            a = Relationship(characterDict[character], "has_oos", noOOS)
-            db.create(a)
+            db.create(Relationship(characterDict[character], "has_oos", noOOS))
 
         # weight
         if weight == "Heavy":
-            a = Relationship(characterDict[character], "weight", heavyweight)
-            db.create(a)
+            db.create(Relationship(characterDict[character], "weight", heavyweight))
         if weight == "Normal":
-            a = Relationship(characterDict[character], "weight", mediumweight)
-            db.create(a)
+            db.create(Relationship(characterDict[character], "weight", mediumweight))
         if weight == "Light":
-            a = Relationship(characterDict[character], "weight", lightweight)
-            db.create(a)
+            db.create(Relationship(characterDict[character], "weight", lightweight))
 
         # tier
         if tier == "A":
-            a = Relationship(characterDict[character], "tier", atier)
-            db.create(a)
+            db.create(Relationship(characterDict[character], "tier", atier))
         if tier == "S":
-            a = Relationship(characterDict[character], "tier", stier)
-            db.create(a)
+            db.create(Relationship(characterDict[character], "tier", stier))
         if tier == "B":
-            a = Relationship(characterDict[character], "tier", btier)
-            db.create(a)
+            db.create(Relationship(characterDict[character], "tier", btier))
         if tier == "C":
-            a = Relationship(characterDict[character], "tier", ctier)
-            db.create(a)
+            db.create(Relationship(characterDict[character], "tier", ctier))
         if tier == "D":
-            a = Relationship(characterDict[character], "tier", dtier)
-            db.create(a)
+            db.create(Relationship(characterDict[character], "tier", dtier))
 
         # jumps
         if jumps == "2":
-            a = Relationship(characterDict[character], "jumps", twoJumps)
-            db.create(a)
+            db.create(Relationship(characterDict[character], "jumps", twoJumps))
         if jumps == "3":
-            a = Relationship(characterDict[character], "jumps", threeJumps)
-            db.create(a)
+            db.create(Relationship(characterDict[character], "jumps", threeJumps))
         if jumps == "4":
-            a = Relationship(characterDict[character], "jumps", fourJumps)
-            db.create(a)
+            db.create(Relationship(characterDict[character], "jumps", fourJumps))
         if jumps == "6":
-            a = Relationship(characterDict[character], "jumps", sixJumps)
-            db.create(a)
+            db.create(Relationship(characterDict[character], "jumps", sixJumps))
 
         # type
         if types == "Human":
-            a = Relationship(characterDict[character], "type", human)
-            db.create(a)
+            db.create(Relationship(characterDict[character], "type", human))
         if types == "Fantasy":
-            a = Relationship(characterDict[character], "type", fantasy)
-            db.create(a)
+            db.create(Relationship(characterDict[character], "type", fantasy))
         if types == "Animal":
-            a = Relationship(characterDict[character], "type", animal)
-            db.create(a)
+            db.create(Relationship(characterDict[character], "type", animal))
 
         # saga
         if saga == "Star Fox":
@@ -390,7 +364,6 @@ def generateUser(user_preferences: dict):
         db.create(Relationship(user, "saga", persona))
     elif saga == "Mii":
         db.create(Relationship(user, "saga", mii))
-
 
 
 def delete():
