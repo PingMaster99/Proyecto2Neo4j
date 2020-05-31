@@ -47,6 +47,9 @@ user_preferences = getAnswers(recommendationQuestions)
 # Generates the user according to the preferences
 database.generateUser(user_preferences)
 
+# End of questionnaire
+print("\nHa terminado el cuestionario :)\n")
+
 # Top recommendation according to user preferences
 recommender.mainRecommendation(user_preferences, database.matcher, user_preferences["experience"])
 

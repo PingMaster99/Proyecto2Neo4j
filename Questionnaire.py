@@ -66,7 +66,8 @@ recommendationQuestions = {
 # User preferences used to generate a user node in the database
 user_preferences = {"experience": None, "fight_style": None, "speed_and_weight": None, "out_of_shield": None,
                     "tier": None, "jump": None, "saga": None, "character_type": None}
-#Available Sagas
+
+# Available Sagas
 saga_dictionary = {1: "Star Fox", 2: "Bayonetta", 3: "Super Mario Bros", 4: "F-Zero", 5: "Fire Emblem", 6: "Kid Icarus",
                    7: "Donkey Kong", 8: "Duck Hunt", 9: "Metroid", 10: "The Legend of Zelda", 11: "Pokemon",
                    12: "Ice Climbers", 13: "Splatoon", 14: "Animal Crossing", 15: "Street Fighter",
