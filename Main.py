@@ -3,14 +3,22 @@ import GenerateDatabase as database
 """
 Main.py
 ------------------
-Main file to run the Smash Bros Main Recommendation
+Main file to generate SmashMain Database from a CSV
 ------------------
 Authors: 
-
+    Isabel Ortiz        18176
+    Douglas De León     18037
+    Pablo Ruiz          18259
+    
+Adapted from Main.py by: 
+    Alejandro Álvarez   12429
+    Joonho Kim          18096
+    Pablo Ruiz          18259
+    
 Date: 
-      30.05.2020
+      21.09.2020
 Version: 
-      1.0.0
+      1.1.0
 """
 
 
