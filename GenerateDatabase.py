@@ -6,9 +6,7 @@ GenerateDatabase.py
 Functions used to generate the database in Neo4j
 ------------------
 Authors: 
-      Alejandro Alvarez (alejandroav93)
-      Joonho Kim (jkmolina)
-      Pablo Ruiz (PingMaster99)
+
 Date: 
       30.05.2020
 Version: 
